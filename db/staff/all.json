@@ -1,0 +1,42 @@
+[
+	{
+		"Id": 1,
+		"Name": "John Doe",
+		"StartDate": "2020-01-15",
+		"Department": "HR",
+		"Role": "HR Manager",
+		"Salary": 5000.50
+	},
+	{
+		"Id": 2,
+		"Name": "Jane Smith",
+		"StartDate": "2018-07-10",
+		"Department": "Marketing",
+		"Role": "Marketing Specialist",
+		"Salary": 4000.75
+	},
+	{
+		"Id": 3,
+		"Name": "Robert Johnson",
+		"StartDate": "2019-03-22",
+		"Department": "Finance",
+		"Role": "Senior Accountant",
+		"Salary": 6000.25
+	},
+	{
+		"Id": 4,
+		"Name": "Emily Williams",
+		"StartDate": "2021-11-05",
+		"Department": "IT",
+		"Role": "Senior Developer",
+		"Salary": 7000.80
+	},
+	{
+		"Id": 5,
+		"Name": "Alex Turner",
+		"StartDate": "2022-04-30",
+		"Department": "Sales",
+		"Role": "Sales Representative",
+		"Salary": 4500.60
+	}
+]
