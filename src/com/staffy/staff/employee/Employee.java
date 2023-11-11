@@ -83,4 +83,17 @@ public abstract class Employee {
     public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("===============================================================%n"));
+        sb.append(String.format("Name: %s%n", this.getName()));
+        sb.append(String.format("Department: %s%n", this.getDepartment()));
+        sb.append(String.format("Role: %s%n", this.getRole()));
+        sb.append(String.format("Start date: %s%n", this.getStartDate()));
+        sb.append(String.format("Salary: %.2f%n", this.getSalary()));
+
+        return sb.toString();
+    }
 }
