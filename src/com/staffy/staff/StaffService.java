@@ -6,7 +6,7 @@ import com.staffy.staff.employee.Employee;
 import com.staffy.staff.employee.EmployeeFactory;
 import com.staffy.util.Config;
 import com.staffy.util.JsonReader;
-import org.json.JSONObject;
+import com.staffy.util.JsonWriter;
 
 import java.nio.file.Path;
 import java.time.LocalDate;
@@ -16,10 +16,12 @@ import java.util.Map;
 
 public class StaffService implements Service<Employee> {
     JsonReader reader;
+    JsonWriter writer;
     private HashMap<Integer, Employee> employeesMap = new HashMap<>();
 
-    public StaffService(JsonReader reader) {
+    public StaffService(JsonReader reader, JsonWriter writer) {
         this.reader = reader;
+        this.writer = writer;
         this.load();
     }
 
@@ -28,6 +30,13 @@ public class StaffService implements Service<Employee> {
         String pathString = config.getEnv("EMPLOYEES_PATH");
 
         this.employeesMap = reader.getEmployeesMap(Path.of(pathString).resolve("all.json"));
+    }
+
+    private void unload() {
+        Config config = Config.getInstance();
+        String pathString = config.getEnv("EMPLOYEES_PATH");
+
+        writer.storeEmployeeMap(this.employeesMap, Path.of(pathString).resolve("all.json"));
     }
 
     @Override
@@ -115,4 +124,8 @@ public class StaffService implements Service<Employee> {
     }
 
     public void fire(int id) {}
+
+    public void exit() {
+        this.unload();
+    }
 }

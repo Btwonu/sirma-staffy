@@ -26,11 +26,11 @@ public class JsonReader {
             for (int i = 0; i < contentJArray.length(); i++) {
                 JSONObject employeeJObject = contentJArray.getJSONObject(i);
 
-                int id = employeeJObject.getInt("Id");
-                String name = employeeJObject.getString("Name");
-                String departmentString = employeeJObject.getString("Department").toUpperCase();
-                String role = employeeJObject.getString("Role");
-                double salary = employeeJObject.getDouble("Salary");
+                int id = employeeJObject.getInt("id");
+                String name = employeeJObject.getString("name");
+                String departmentString = employeeJObject.getString("department").toUpperCase();
+                String role = employeeJObject.getString("role");
+                double salary = employeeJObject.getDouble("salary");
 
                 String dateFormat = "yyyy-MM-dd";
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern(dateFormat);
@@ -38,9 +38,9 @@ public class JsonReader {
                 LocalDate endDate = null;
 
                 try {
-                    startDate = LocalDate.parse(employeeJObject.getString("StartDate"), formatter);
+                    startDate = LocalDate.parse(employeeJObject.getString("startDate"), formatter);
                     if (employeeJObject.has("EndDate")) {
-                        endDate = LocalDate.parse(employeeJObject.getString("EndDate"), formatter);
+                        endDate = LocalDate.parse(employeeJObject.getString("endDate"), formatter);
                     }
                 } catch (DateTimeParseException | JSONException e) {
                     System.out.println("Invalid date format.");

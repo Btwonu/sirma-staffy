@@ -3,6 +3,7 @@ import com.staffy.cli.StaffManager;
 import com.staffy.staff.StaffService;
 import com.staffy.staff.employee.Employee;
 import com.staffy.util.JsonReader;
+import com.staffy.util.JsonWriter;
 
 import java.util.Scanner;
 
@@ -11,7 +12,8 @@ public class Main {
     static Scanner scanner;
     public static void main(String[] args) {
         JsonReader jsonReader = new JsonReader();
-        Service<Employee> staffService = new StaffService(jsonReader);
+        JsonWriter jsonWriter = new JsonWriter();
+        Service<Employee> staffService = new StaffService(jsonReader, jsonWriter);
         StaffManager manager = new StaffManager(staffService);
 
         try {
@@ -34,5 +36,6 @@ public class Main {
         System.out.println("Search id {id} - search for an employee by id");
         System.out.println("Search name {name} - search for an employee by name");
         System.out.println("Search department {department} - list employees from a department");
+        System.out.println("Exit - Save & exit the application");
     }
 }

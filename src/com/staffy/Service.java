@@ -12,4 +12,6 @@ public interface Service<T> {
 
     T searchByName(String name);
     ArrayList<T> searchByDepartment(String department);
+
+    void exit();
 }

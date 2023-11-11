@@ -21,7 +21,7 @@ public class StaffManager {
 
         System.out.println(input.getCommand());
 
-        if (input.getCommand().equalsIgnoreCase("Add")) {
+        if (input.getCommand().equalsIgnoreCase("add")) {
             System.out.println("Please provide employee data in the following form: {id}, {name}, {department}, {role}, {salary}");
 
             Scanner scanner;
@@ -37,7 +37,7 @@ public class StaffManager {
             this.staffService.add(data);
         }
 
-        if (input.getCommand().equalsIgnoreCase("List")) {
+        if (input.getCommand().equalsIgnoreCase("list")) {
             this.staffService.listAll();
         }
 
@@ -78,6 +78,10 @@ public class StaffManager {
             } else {
                 System.out.println("Employee not found");
             }
+        }
+
+        if (input.getCommand().equalsIgnoreCase("exit")) {
+            this.staffService.exit();
         }
     }
 }

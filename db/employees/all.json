@@ -1,50 +1,58 @@
 [
-	{
-		"Id": 1,
-		"Name": "John Doe",
-		"StartDate": "2020-01-15",
-		"Department": "HR",
-		"Role": "HR Manager",
-		"Salary": 5000.50
-	},
-	{
-		"Id": 2,
-		"Name": "Jane Smith",
-		"StartDate": "2018-07-10",
-		"Department": "Marketing",
-		"Role": "Marketing Specialist",
-		"Salary": 4000.75
-	},
-	{
-		"Id": 3,
-		"Name": "Robert Johnson",
-		"StartDate": "2019-03-22",
-		"Department": "Finance",
-		"Role": "Senior Accountant",
-		"Salary": 6000.25
-	},
-	{
-		"Id": 4,
-		"Name": "Emily Williams",
-		"StartDate": "2021-11-05",
-		"Department": "IT",
-		"Role": "Senior Developer",
-		"Salary": 7000.80
-	},
-	{
-		"Id": 5,
-		"Name": "Alex Turner",
-		"StartDate": "2022-04-30",
-		"Department": "Sales",
-		"Role": "Sales Representative",
-		"Salary": 4500.60
-	},
-	{
-		"Id": 6,
-		"Name": "Carbanaro Mecchi",
-		"StartDate": "2020-01-15",
-		"Department": "HR",
-		"Role": "HR Worker",
-		"Salary": 2000.50
-	}
+    {
+        "role": "HR Manager",
+        "name": "John Doe",
+        "id": 1,
+        "department": "HR",
+        "salary": 5000.5,
+        "startDate": "2020-01-15"
+    },
+    {
+        "role": "Marketing Specialist",
+        "name": "Jane Smith",
+        "id": 2,
+        "department": "MARKETING",
+        "salary": 4000.75,
+        "startDate": "2018-07-10"
+    },
+    {
+        "role": "Senior Accountant",
+        "name": "Robert Johnson",
+        "id": 3,
+        "department": "FINANCE",
+        "salary": 6000.25,
+        "startDate": "2019-03-22"
+    },
+    {
+        "role": "Senior Developer",
+        "name": "Emily Williams",
+        "id": 4,
+        "department": "IT",
+        "salary": 7000.8,
+        "startDate": "2021-11-05"
+    },
+    {
+        "role": "Sales Representative",
+        "name": "Alex Turner",
+        "id": 5,
+        "department": "SALES",
+        "salary": 4500.6,
+        "startDate": "2022-04-30"
+    },
+    {
+        "role": "HR Worker",
+        "name": "Carbanaro Mecchi",
+        "id": 6,
+        "department": "HR",
+        "salary": 5000.5,
+        "startDate": "2020-01-15"
+    },
+    {
+        "role": "Junior Java Developer",
+        "name": "Peter Peterson",
+        "id": 10,
+        "department": "IT",
+        "salary": 1400.5,
+        "startDate": "2023-11-11"
+    }
 ]
