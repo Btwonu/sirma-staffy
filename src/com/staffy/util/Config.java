@@ -1,4 +1,4 @@
-package com.store.util;
+package com.staffy.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
