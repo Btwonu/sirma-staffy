@@ -66,14 +66,51 @@ public class StaffService implements Service<Employee> {
 
     @Override
     public Employee searchById(int id) {
-        return null;
+        if (!this.employeesMap.containsKey(id)) {
+            System.out.println("Employee id not found");
+            return null;
+        }
+
+        return this.employeesMap.get(id);
     }
 
     public Employee searchByName(String name) {
-        return null;
+       for (Map.Entry<Integer, Employee> entry : this.employeesMap.entrySet()) {
+           boolean found = false;
+           Employee employee = entry.getValue();
+
+           if (employee.getName().equalsIgnoreCase(name)) {
+               found = true;
+           }
+
+           if (found) {
+               return employee;
+           }
+       }
+
+       return null;
     }
 
-    public Employee searchByDepartment(String department) {
+    public ArrayList<Employee> searchByDepartment(String department) {
+        Department providedDepartment = Department.valueOf(department.toUpperCase());
+        ArrayList<Employee> employeesList = new ArrayList<>();
+
+        boolean found = false;
+        for (Map.Entry<Integer, Employee> entry : this.employeesMap.entrySet()) {
+
+
+            Employee employee = entry.getValue();
+
+            if (employee.getDepartment().equals(providedDepartment)) {
+                found = true;
+                employeesList.add(employee);
+            }
+        }
+
+        if (found) {
+            return employeesList;
+        }
+
         return null;
     }
 

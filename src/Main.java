@@ -29,6 +29,10 @@ public class Main {
     }
 
     private static void displayCommands() {
-        System.out.println("Commands...");
+        System.out.println("Add - add a new employee");
+        System.out.println("List - list all employees");
+        System.out.println("Search id {id} - search for an employee by id");
+        System.out.println("Search name {name} - search for an employee by name");
+        System.out.println("Search department {department} - list employees from a department");
     }
 }
