@@ -38,5 +38,13 @@
 		"Department": "Sales",
 		"Role": "Sales Representative",
 		"Salary": 4500.60
+	},
+	{
+		"Id": 6,
+		"Name": "Carbanaro Mecchi",
+		"StartDate": "2020-01-15",
+		"Department": "HR",
+		"Role": "HR Worker",
+		"Salary": 2000.50
 	}
 ]
